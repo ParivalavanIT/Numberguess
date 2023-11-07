@@ -4,13 +4,16 @@ namespace NumberGuess
 {
     internal class Program
     {
+        // Initialize a random number generator
         static Random random = new Random();
 
+        // Generate a random number between min and max (inclusive)
         static int GenerateRandomNumber(int min, int max)
         {
             return random.Next(min, max + 1);
         }
 
+        // Get a valid guess from the user
         static int GetGuess()
         {
             int guess;
@@ -28,6 +31,7 @@ namespace NumberGuess
             }
         }
 
+        // Calculate the score based on the number of attempts
         static int CalculateScore(int attempts)
         {
             if (attempts == 3)
@@ -48,6 +52,7 @@ namespace NumberGuess
             }
         }
 
+        // Display end game message with score and correct number
         static void EndGame(int score, int num)
         {
             if (score > 0)
