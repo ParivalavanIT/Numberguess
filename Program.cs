@@ -23,19 +23,18 @@
                     if (Flag == 3)
                     {
                         Console.WriteLine("Don't worry restart the game \n->A - Add extra 1 guess \n->Any Key  - Exit");
-                        string Choice = Console.ReadLine().ToLower();
-                        switch (Choice)
+                        string Choice = " ";
+                        Choice = Console.ReadLine().ToLower();
+                        if (Choice == "a" && ExtraLifeFlag<=1)
                         {
-                            case "a":
-                                {
-                                    Flag--;
-                                    ExtraLifeFlag++;
-                                    break;
-                                }
-                            default:
-                                {
-                                    break;
-                                }
+                            Flag--;
+                            ExtraLifeFlag++;
+                            break;
+                        }
+                        else
+                        {
+                            EndGame();
+                            break;
                         }
                     }
                     Console.WriteLine("Enter your guess");
@@ -43,7 +42,19 @@
 
                     if (guess == RandomNum)
                     {
-                        Console.WriteLine("Hey!  you are awesome ");
+                        if (Flag == 0)
+                        {
+                            Console.WriteLine("Whoo hoo! 20 points");
+                        }else if(Flag==1){
+                            Console.WriteLine("Awesome! 15 points");
+                        }
+                        else if (Flag == 2 && ExtraLifeFlag==1) {
+                            Console.WriteLine("Hoo! you got 5 points");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Perfect ! You got 10 points");
+                        }
                         IsCorrectGuess = true;
                         break;
                     }
@@ -75,7 +86,11 @@
         }
         static void EndGame()
         {
+            Console.Clear();
             Console.WriteLine("Thanks for playing!");
+            Console.WriteLine("Enter to new game....");
+            Console.ReadKey();
+
         }
         static void Main(string[] args)
         {
