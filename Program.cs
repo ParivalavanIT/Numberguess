@@ -88,7 +88,7 @@
         {
             Console.Clear();
             Console.WriteLine("Thanks for playing!");
-            Console.WriteLine("Enter to new game....");
+            Console.WriteLine("Enter to new game.....");
             Console.ReadKey();
 
         }
