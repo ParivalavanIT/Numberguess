@@ -72,44 +72,45 @@ namespace NumberGuess
 
         static void Main(string[] args)
         {
-            while (true)
-            {
-                int attempts = 3;
-                int guess;
+            // while (true)
+            // {
+            //     int attempts = 3;
+            //     int guess;
 
-                Console.Clear();
-                Console.WriteLine("Let's play the game ");
-                Console.WriteLine("Guess the number between 1 to 10 friends \nyou have 3 guesses");
+            //     Console.Clear();
+            //     Console.WriteLine("Let's play the game ");
+            //     Console.WriteLine("Guess the number between 1 to 10 friends \nyou have 3 guesses");
 
-                int randomNumber = GenerateRandomNumber(1, 10);
+            //     int randomNumber = GenerateRandomNumber(1, 10);
 
-                while (attempts > 0)
-                {
-                    guess = GetGuess();
+            //     while (attempts > 0)
+            //     {
+            //         guess = GetGuess();
 
-                    if (guess == randomNumber)
-                    {
-                        int score = CalculateScore(attempts);
-                        EndGame(score, guess);
-                        break;
-                    }
-                    else if (guess > randomNumber)
-                    {
-                        Console.WriteLine("I am appreciating you are thinking big but not now ");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Think big ");
-                    }
+            //         if (guess == randomNumber)
+            //         {
+            //             int score = CalculateScore(attempts);
+            //             EndGame(score, guess);
+            //             break;
+            //         }
+            //         else if (guess > randomNumber)
+            //         {
+            //             Console.WriteLine("I am appreciating you are thinking big but not now ");
+            //         }
+            //         else
+            //         {
+            //             Console.WriteLine("Think big ");
+            //         }
 
-                    attempts--;
-                }
+            //         attempts--;
+            //     }
 
-                if (attempts == 0)
-                {
-                    EndGame(0, randomNumber);
-                }
-            }
+            //     if (attempts == 0)
+            //     {
+            //         EndGame(0, randomNumber);
+            //     }
+            // }
+            Console.WriteLine("Jenkins Working good");
         }
     }
 }
