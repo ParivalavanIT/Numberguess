@@ -32,7 +32,7 @@ namespace NumberGuess
         }
 
         void AddNum(){
-            Console.WriteLine("This is error")
+            Console.WriteLine("Function added");
         }
         // Calculate the score based on the number of attempts
         static int CalculateScore(int attempts)
